@@ -1,0 +1,11 @@
+	AREA TEST, CODE, READONLY
+ENTRY
+
+START
+	ldr R0,=0x5
+	ldr R1,=0x5
+	LDR R2,=0X2
+	LDR R3,=0X4
+	UMLAL R3,R2,R0,R1 ;[RdHi, RdLo] = [RdHi, RdLo] + (Rm *Rs)
+BACK B BACK
+	END
